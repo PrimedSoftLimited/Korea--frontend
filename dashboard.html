@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <title>Welcome</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="todolistnew.css" />
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg nav-bg navbar-dark">
-        <a class="brand-name navbar-brand " href="welcome.html">Placeholder</a>
+<body class="">
+    <nav class="navbar navbar-expand-lg nav-bg-dark navbar-dark">
+        <a class="brand-name navbar-brand " href="welcome.html">Goal Stack</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="nav-font navbar-toggler-icon"></span>
@@ -24,9 +24,12 @@
                     <img src="images/settings.svg" class="img-fluid" style="width:20px">
                 </li>
                 <li class="nav-item dropdown mx-3">
-                    <img src="images/account.svg" class="img-fluid" style="width:20px">
+                    <img src="images/account.svg" class="img-fluid" style="width:20px"
+                        onclick="location.href='profile.html'">
                 </li>
-
+                <li class="nav-item dropdown mx-3">
+                    <button class="btn btn-danger" id="logout" onclick="logout('goaltoken')"></button>
+                </li>
             </ul>
 
         </div>
@@ -34,7 +37,7 @@
     </nav>
     <div class="container-fluid dashboard">
         <div class="row col-12">
-            <div class="col-12 col-md-3">
+            <!--<div class="col-12 col-md-3">
                 <div class="list-group list-date mt-5">
                     <a href="#" class="list-css list-group-item list-group-item-action active">
                         Today
@@ -47,36 +50,64 @@
                 <hr style="background-color:white">
 
 
-            </div>
+            </div>-->
 
 
-            <div class="col-12 col-md-6 full-list border text-center">
-                <img src="images/box1.svg" style="width:20%" class="empty-list-img">
-                <h5 class="mt-3">Nothing here yet.<br> Add a new task.</h5>
-                <button class="btn add-task-btn border-dark">Add New</button>
+            <div class="col-12 col-md-9 scroller full-list-con border-right text-center">
+                <div id="nothing-here">
+                    <img src="images/box1.svg" style="width:20%" class="empty-list-img">
+                    <h5 class="mt-3">Nothing here yet.<br> Add a new task.</h5>
+
+                </div>
+
+                <div id="full-list" class="mt-5 list-group col-10 ml-5">
+                   <span class="d-none">Your goals</span>
+                    <ul id="goals" class="col-12 ml-auto">
+
+                    </ul>
+
+
+                </div>
+                <div class="spinner-border" id="loading-gif" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+
+
 
             </div>
             <div class="col-12 col-md-3">
                 <div class="col-12 my-5">
-                    <form class="mx-auto">
+                    <form class="mx-auto" id="goalForm">
                         <div class="form-group">
-                            <label for="task-name">Task Name</label>
-                            <input type="text" class="form-control col-12 form-control-sm" id="task-name"
-                                aria-describedby="emailHelp" placeholder="Task Name">
+                            <label for="goal-name">Goal Name</label>
+                            <input type="text" class="form-control col-12 form-control-sm" id="goalname"
+                                aria-describedby="emailHelp" placeholder="Goal Name">
+                                <p id="err-gname" class="text-danger tiny-text"></p>
                         </div>
 
                         <div class="form-group">
-                            <label for="task-description">Task Description</label>
-                            <input type="text" class="form-control col-12" id="task-description" placeholder="Describe this task...">
-
+                            <label for="goalbody">Goal Description</label>
+                            <input type="text" class="form-control col-12" id="goalbody"
+                                placeholder="Describe this task...">
+                                <p id="err-gbody" class="text-danger tiny-text"></p>
                         </div>
                         <div class="form-group">
-                            <label for="due-date">Due Date</label>
-                            <input type="date" class="form-control col-12" id="due-date" placeholder="Due By?">
+                            <label for="goalstart">Start Date</label>
+                            <input type="date" class="form-control col-12" id="goalstart">
+                            <p id="err-start" class="text-danger tiny-text"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="goalend">End Date</label>
+                            <input type="date" class="form-control col-12" id="goalend">
+                            <p id="err-end" class="text-danger tiny-text"></p>
                         </div>
 
 
-                        <button type="submit" class="btn add-task-btn col-12">Add Task</button>
+
+                        <button type="submit" id="add-task-btn" class="btn task-btn col-12">Add
+                            Goal</button>
+
+
 
 
                     </form>
@@ -88,6 +119,8 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="/axios.js"></script>
+    <script src="/main.js"></script>
 </body>
 
 </html>

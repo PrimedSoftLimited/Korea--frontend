@@ -7,6 +7,9 @@
 </head>
 
 <body>
+    <div class="spinner-border" id="loading-gif" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
     <div class="container-fluid">
         <div class="row reg-page">
             <div class="col-12  col-lg-5 px-0 register">
@@ -14,6 +17,9 @@
                     <h3 class="py-4 text-center brand-name" onclick="location.href='welcome.html'">Placeholder</h3>
                     <div class="row">
                         <div class="mx-auto">
+                            <div id="error-login" class="alert alert-danger" role="danger">
+
+                            </div>
                             <form id="loginForm">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
@@ -21,14 +27,16 @@
                                         aria-describedby="emailHelp" placeholder="Enter email">
                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email
                                         with anyone else.</small>
+                                    <p id="err-email" class="text-danger tiny-text"></p>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
                                     <input type="password" class="form-control col-12 form-control-sm" id="lpwd"
                                         placeholder="Password">
+                                    <p id="err-pwd" class="text-danger tiny-text"></p>
                                 </div>
-                                    <button type="submit" class="btn btn-primary login-btn col-12">Submit</button>
-                                    
+                                <button type="submit" class="btn btn-primary login-btn col-12">Submit</button>
+
                             </form>
 
 
@@ -37,7 +45,8 @@
 
 
 
-                            <button class="btn btn-primary col-12 or-register-btn" onclick="location.href='register.html'">Create
+                            <button class="btn btn-primary col-12 or-register-btn"
+                                onclick="location.href='register.html'">Create
                                 an account</button>
                         </div>
 

@@ -1,13 +1,55 @@
 body {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
-.our-color{
+
+.our-color {
     color: #fc5155;
 }
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.scroller {
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll !important;
+    scrollbar-color:  #fc5155 #282828;
+    scrollbar-width: thin;
+}
+.no-scroll{
+    overflow-y: hidden;
+}
+.brand-bg{
+    background-color: #282828;
+}
+#logout{
+    width:0px;
+    height: 25px;
+    border-radius: 100px;
+}
+#error-login{
+    display:none;
+}
+#error-reg{
+    display:none;
+}
+.tiny-text{
+    font-size: 10px;
+}
+.med-text{
+    font-size: 14px;
+}
+.big-text{
+    font-size: 18px;
+}
+
 /*Welcome Page*/
 .jumbo-bg {
-    background-color:black;
+    background-color: black;
     background-size: cover;
     min-height: 85vh;
 }
@@ -17,43 +59,56 @@ body {
     font-size: 10vh;
 }
 
-.nav-bg {
+.nav-bg-dark {
     /*#ff84ff*/
     background-color: black;
-    border-bottom:1px solid white;
+    border-bottom: 1px solid white;
 }
+
+.nav-bg-light {
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
 .nav-font {
-   color: white !important;
+    color: white !important;
 }
-.navbar-toggler-icon{
-    color:white;
+
+.navbar-toggler-icon {
+    color: white;
 }
 
 .welcome-footer {
     background-color: navajowhite;
 }
-.carousel-item img{
-    height:91vh;
+
+.carousel-item img {
+    height: 91vh;
 }
+
 .car-words {
     border: 1px solid white;
     margin-bottom: 30vh;
 }
+
 .brand-name {
     color: #fc5155 !important;
 }
-.brand-name:hover{
+
+.brand-name:hover {
     color: white;
 }
 
-.introduction{
-    background-image:url("Images/bulb.jpg");
-    background-size:cover;
-    color:white;
+.introduction {
+    background-image: url("Images/bulb.jpg");
+    background-size: cover;
+    color: white;
 }
-.intro-con{
-    max-width:70%;
+
+.intro-con {
+    max-width: 70%;
 }
+
 .intro-con span {
     color: #fc5155;
 }
@@ -61,146 +116,308 @@ body {
 /*Registration and Log In Page*/
 .register-form {
     color: white;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     height: 100vh;
 }
+
 .login-form {
     color: white;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     height: 100vh;
 }
-.register-form::-webkit-scrollbar{
-    width:5px;
+
+.register-form::-webkit-scrollbar {
+    width: 5px;
     background-color: red;
 }
-.form-group input{
-}
-.register-btn{
+
+.form-group input {}
+
+.register-btn {
     background-color: black;
-	color: #fc5155;
-	border: 1px solid #fc5155;
+    color: #fc5155;
+    border: 1px solid #fc5155;
 }
-.or-register-btn{
+
+.or-register-btn {
     background-color: #fc5155;
-    border:1px solid black;
+    border: 1px solid black;
 }
+
 .or-login-btn {
     background-color: #fc5155;
     border: 1px solid #fc5155;
 }
 
 .login-btn {
-	background-color: black;
-	color: #808080;
-	border: 1px solid #fc5155;
+    background-color: black;
+    color: #808080;
+    border: 1px solid #fc5155;
 }
+
 .login-btn:hover {
-    background-color: rgba(0,0,0,0.2);
-    border:1px solid #fc5155;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #fc5155;
 }
+
+.login-btn:focus {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 0 0 .2rem #fc5155 !important;
+    border: 0.7px solid #fc5155;
+}
+
 .or-login-btn:hover {
-    background-color: rgba(0,0,0,0.2);
-    border:1px solid #fc5155;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #fc5155;
 }
+
 .register-btn:hover {
-    background-color: rgba(0,0,0,0.2);
-    border:1px solid #fc5155;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #fc5155;
 }
+
 .or-register-btn:hover {
-    background-color: rgba(0,0,0,0.2);
-    border:1px solid #fc5155;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #fc5155;
 }
-.or-register-btn:focus{
-    background-color:  rgba(0,0,0,0.2) !important;
+
+.or-register-btn:focus {
+    background-color: rgba(0, 0, 0, 0.2) !important;
     box-shadow: 0 0 0 .2rem #fc5155 !important;
-    border:0.7px solid #fc5155;
+    border: 0.7px solid #fc5155;
 }
-.or-login-btn:focus{
-    background-color:  rgba(0,0,0,0.2) !important;
+
+.or-login-btn:focus {
+    background-color: rgba(0, 0, 0, 0.2) !important;
     box-shadow: 0 0 0 .2rem #fc5155 !important;
-    border:0.7px solid #fc5155;
+    border: 0.7px solid #fc5155;
 }
+
 #error {
     display: none;
 }
 
-.register{
-	
+.register {}
 
-}
 .reg-page {
-	background-image: url("Images/working-girl.jpg");
-	background-size: cover;
+    background-image: url("Images/working-girl.jpg");
+    background-size: cover;
 }
+
 .reg-slogan {
-	margin-top: 40vh;
-	color: white;
-    width:50%;
+    margin-top: 40vh;
+    color: white;
+    width: 50%;
 }
-.reg-slogan h4{
+
+.reg-slogan h4 {
     font-weight: bolder;
     font-size: 5vh;
 }
+
 /*Dashboard*/
-.brand-name-white{
-    color:white;
-}
-.nav-utility li{
-    
 
+
+.brand-name-white {
+    color: white;
 }
 
-.dashboard{
+.nav-utility li {}
+
+.dashboard {
     background-color: #282828;
-    color:white;
+    color: white;
+}
+.full-list-con{
+    height:60vh;
+}
+.goal-list{
+    border: 1px solid lightgrey;
+    cursor: pointer;
 }
 
-.list-css{
+.list-css {
     background-color: #282828;
-    color:white;
+    color: white;
 }
-.list-date .active{
+
+.list-date .active {
     background-color: #fc5155;
-    color:white;
-    border:1px solid black;
-}
-.empty-list-img{
-    margin-top:40%;
-}
-.add-task-btn{
-    background-color: #fc5155;
-    color:white;
+    color: white;
     border: 1px solid black;
 }
-#task-description{
+
+.empty-list-img {
+    margin-top: 40%;
 }
-.navbar-toggler-icon{
-    color:white;
+
+.task-btn {
+    background-color: #fc5155;
+    color: white;
+    border: 1px solid black;
 }
+
+#task-description {}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+.goal-body {
+    min-height: 60vh;
+}
+
+.border-brand {
+    border: 1px solid #fc5155;
+}
+
+.border-curved {
+    border-radius: 5px;
+}
+.goal-desc{
+    height:10vh;
+}
+
+
+
 
 /*Profile Page*/
+#spinner-bg {
+    border-radius: 10px;
+    position: absolute;
+    top: 48%;
+    left: 47.2%;
+    height: 60px;
+    width: 100px;
+    background-color: lightgrey;
+}
 
-.profile-img img{
+#loading-gif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#profilebody {
+    display: none;
+}
+
+.profile-img img {
     padding: 30px;
-    border:1px solid grey;
+    border: 1px solid grey;
     border-radius: 70px;
 }
-.profile-name{
+.new-profile-img{
+    background-color: white;
+}
+.new-profile-img img {
+    border: 1px solid grey;
+    border-radius: 100px;
+    position:absolute;
+    top:33%;
+    left:5%;
+}
+
+.profile-name {
     margin-top: 1%;
 }
-.user-info{
-    border-left:1px solid grey;
+
+.user-info {
+    border-left: 1px solid grey;
 }
-@media (min-width: 768px){
-    .full-list{
+
+.profile-nav a {
+    color: grey;
+}
+.up-next{
+    background-color: #282828;
+    height: 40vh;
+}
+.up-next-words{
+    color:white;
+}
+.up-next-words span{
+    font-size: 25px;
+}
+.up-next-words p{
+    font-size: 30px;
+}
+.account-details{
+    height:50vh;
+}
+.account-details-con{
+    margin-top:25%;
+}
+#user-name-here{
+    font-size:25px;
+}
+/*Edit Goals Page*/
+.edit-area{
+    background-image:url("Images/arts.jpg");
+    overflow-y: scroll !important;
+    background-position: center;
+    background-size:cover;
+    min-height:100vh;
+    border-right: 1px solid black;
+}
+#full-tasks{
+    min-height: 25vh;
+    color:white;
+    background-color: rgba(0,0,0,0.2);
+
+}
+.checked-task{
+    height:50px;
+    margin-top:8.5px;
+    color: #282828;
+}
+.goal-form-con{
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 12px;
+}
+.goal-form-con label{
+    /*text-shadow: 2px 3px 1px white, 2px 2px 2px black;*/
+    color:white;
+}
+#goal-body{
+    height:20vh;
+}
+#editGoalForm{
+    padding:30px;
+}
+#editGoalForm input{
+    color:black;
+}
+.reply{
+    display: none;
+}
+#add-task-form{
+    margin-top: 5vh;
+}
+.update-btn{
+    background-color: black;
+    color:white;
+    transition: 1s all ease;
+}
+.update-btn:hover{
+    transform:scale(1.003)
+}
+@media (min-width: 768px) {
+    .full-list-con {
         height: 100vh;
     }
 }
-@media (max-width: 768px){
-    .full-list{
+
+@media (max-width: 768px) {
+    .full-list-con {
         height: 50vh;
     }
-    .nav-utility{
+
+    .nav-utility {
         display: inline;
+    }
+    .reg-page {
+        background-image: url("Images/working-girl-mobile.jpg");
+        background-size: cover;
     }
 }

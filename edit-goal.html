@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Goal</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="todolistnew.css" />
+</head>
+
+<body class="brand-bg">
+    <div class="spinner-border text-light" id="loading-gif" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <nav class="navbar navbar-expand-lg nav-bg-dark navbar-dark">
+        <a class="brand-name navbar-brand ">Goal Stack</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="nav-font navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-font ml-auto nav-utility">
+                <li class="nav-item active mx-3">
+                    <img src="images/add.svg" class="img-fluid" style="width:20px">
+                </li>
+                <li class="nav-item mx-3">
+                    <img src="images/settings.svg" class="img-fluid" style="width:20px">
+                </li>
+                <li class="nav-item dropdown mx-3">
+                    <img src="images/account.svg" class="img-fluid" style="width:20px">
+                </li>
+                <li class="nav-item dropdown mx-3">
+                    <button class="btn btn-danger" id="logout" onclick="logout('goaltoken')"></button>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-7 edit-area scroller">
+                <div class="col-9 goal-form-con mx-auto mt-5">
+                    <form id="editGoalForm">
+                        <div class="form-group goal-name-con">
+                            <label for="goal-name">Goal Name</label>
+                            <input type="text" class="form-control form-control-sm border" id="goal-name" placeholder=""
+                                value="fetching...">
+                        </div>
+
+                        <div class="form-group goal-body-con">
+                            <label for="goal-body">Goal Body</label>
+                            <textarea type="text" class="form-control form-control-sm border" id="goal-body" row="3"
+                                placeholder="" value="fetching..."></textarea>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="goalstart">Start Date</label>
+                            <input type="date" readonly class="form-control form-control-sm col-6" id="goalstart">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="goalend">End Date</label>
+                            <input type="date" class="form-control form-control-sm col-6" id="goalend">
+
+                        </div>
+                        <button type="submit" class="btn btn-primary border-0 update-btn text-right">Update</button>
+
+                        <span class="mt-3 text-success reply" id="updateSuccess">Goal Data Updated Successfully</span>
+                    </form>
+
+                </div>
+                <div class="border-bottom mt-3 text-center mt-3" id="full-tasks">
+                    <span class="big-text border-bottom">Tasks for this goal</span>
+                    <ul id="tasks" class="mt-3 checked-list-box">
+
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="col-5 task-area">
+                <div class="col-12 text-center mt-5">
+                    <span class="text-white border-bottom">Add a task for this Goal</span>
+                </div>
+
+                <form class="mx-auto col-7 text-white" id="add-task-form">
+
+                    <div class="form-group">
+                        <label for="goal-name">Task Name</label>
+                        <input type="text" class="form-control col-12 form-control-sm" id="taskname"
+                            aria-describedby="emailHelp" placeholder="Task Name">
+                            <p id="err-tname" class="text-danger tiny-text"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goalbody">Task Description</label>
+                        <input type="text" class="form-control col-12" id="taskbody"
+                            placeholder="Describe this task...">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="goalstart">Start Date</label>
+                        <input type="date" class="form-control col-12" id="taskstart">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="goalend">End Date</label>
+                        <input type="date" class="form-control col-12" id="taskend">
+
+                    </div>
+
+
+
+                    <button type="submit" id="add-task-btn" class="btn task-btn col-12">Add
+                        Task</button>
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="/axios.js"></script>
+    <script src="/main.js"></script>
+</body>
+
+</html>

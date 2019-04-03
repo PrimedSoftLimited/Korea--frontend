@@ -7,48 +7,58 @@
     <link rel="stylesheet" href="todolistnew.css" />
 </head>
 
-<body>
+<body class="no-scroll">
+    <div class="spinner-border" id="loading-gif" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
     <div class="container-fluid">
         <div class="row reg-page">
             <div class="col-12  col-lg-5 px-0 register">
                 <div class=" register-form ">
-                    <h3 class="py-4 text-center brand-name" onclick="location.href='index.html'">Placeholder</h3>
+                    <h3 class="py-4 text-center brand-name" onclick="location.href='index.html'">Goal Stack</h3>
                     <div class="row">
                         <div class="mx-auto">
-                            <div id="error" class="alert alert-danger" role="danger">
-                                
+                            <div id="error-reg" class="alert alert-danger" role="danger">
+
                             </div>
                             <form id="regForm">
                                 <div class="form-group">
                                     <label for="InputName">UserName</label>
                                     <input type="text" class="form-control col-12 form-control-sm" id="rusername"
                                         aria-describedby="emailHelp" placeholder="First Name">
+                                    <p id="err-uname" class="text-danger tiny-text"></p>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control col-12" id="remail" aria-describedby="emailHelp"
-                                        placeholder="Enter email">
+                                    <input type="email" class="form-control col-12" id="remail"
+                                        aria-describedby="emailHelp" placeholder="Enter email">
                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email
                                         with
                                         anyone else.</small>
+                                    <p id="err-email" class="text-danger tiny-text"></p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
+                                    <label for="rpwd">Password</label>
                                     <input type="password" class="form-control col-12" id="rpwd" placeholder="Password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="InputName">Phone Number</label>
-                                    <input type="tel" class="form-control col-12" id="rphone" placeholder="Phone Number">
+                                    <p id="err-pwd" class="text-danger tiny-text"></p>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary register-btn col-12" >Register</button>
+                                <div class="form-group">
+                                    <label for="InputName">Phone Number</label>
+                                    <input type="tel" class="form-control col-12" id="rphone"
+                                        placeholder="Phone Number">
+                                    <p id="err-phone" class="text-danger tiny-text"></p>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary register-btn col-12">Register</button>
                             </form>
 
                             <p class="mt-1 text-muted"><small>Forgot Password?</small></p>
                             <div class="text-center">OR</div>
 
-                            <button class="btn btn-primary col-12 or-login-btn" onclick="location.href='signin.html'">Log
+                            <button class="btn btn-primary col-12 or-login-btn"
+                                onclick="location.href='signin.html'">Log
                                 In</button>
                         </div>
 
@@ -67,7 +77,7 @@
 
 
 
-    
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="axios.js"></script>
